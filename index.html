@@ -13,33 +13,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .brand-logo{width:174px;height:auto;display:block}.brand-logo .logo-lines{fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}.brand-logo .logo-node{fill:currentColor}.brand-logo text{font-family:Inter,Arial,sans-serif;font-weight:500;letter-spacing:-1.8px;fill:currentColor}.site-header .brand-logo{color:#111}.brand-footer .brand-logo{color:#fff;width:162px}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.team-card{display:flex;flex-direction:column;min-height:100%;padding:32px}.team-head{display:flex;gap:16px;align-items:center}.team-head .avatar{flex:0 0 auto}.team-card h3{margin:0 0 4px}.team-role{margin:0!important;color:var(--muted);font-size:.9rem}.team-expertise{margin:24px 0 18px!important;color:#49575f!important;font-size:.92rem!important}.profile-links{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:26px}.profile-links a{padding:7px 11px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:.78rem}.profile-links a:hover{border-color:#a8c9b8;background:var(--green-soft)}.recent-pubs{margin-top:auto;padding-top:20px;border-top:1px solid var(--line)}.recent-pubs h4{margin:0 0 14px;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green)}.pub-list{display:grid;gap:13px}.pub-item{display:block!important;color:var(--ink)!important;font-size:.86rem!important;font-weight:600!important;line-height:1.45}.pub-item span{display:block;margin-top:3px;color:var(--muted);font-size:.76rem;font-weight:500}.pub-item:hover{color:var(--green)!important}.team-note{max-width:820px;margin:28px 0 0;color:var(--muted);font-size:.84rem}.logo-lockup-large{width:min(420px,82%);color:#fff;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2}.logo-lockup-large .logo-lines{fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}.logo-lockup-large .logo-node{fill:currentColor}.logo-lockup-large text{font-family:Inter,Arial,sans-serif;font-weight:500;letter-spacing:-1.8px;fill:currentColor}.hero-visual .molecule,.hero-visual .visual-orbit{opacity:.18}.hero-visual .signal-card{z-index:3}@media(max-width:760px){.team-grid{grid-template-columns:1fr}.brand-logo{width:150px}.logo-lockup-large{width:76%}}
+  </style>
 </head>
 <body>
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="PharmaToxAI home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" role="img">
-            <circle cx="15" cy="14" r="5"></circle>
-            <circle cx="34" cy="13" r="4"></circle>
-            <circle cx="24" cy="33" r="5"></circle>
-            <path d="M19 16.5 30 14.5M17.5 18.5 22 28.5M31.5 17 27 29"></path>
-          </svg>
-        </span>
-        <span>PharmaToxAI</span>
+        <svg class="brand-logo" viewBox="0 0 430 150" role="img" aria-label="PharmaToxAI">
+          <g transform="translate(8 4)"><path class="logo-lines" d="M70 20 112 44 112 93 70 117 28 93 28 44Z"/><path class="logo-lines" d="M112 44 136 30M28 93 10 104M112 93 132 105"/><circle class="logo-node" cx="140" cy="28" r="9"/><circle class="logo-node" cx="8" cy="106" r="9"/><circle class="logo-node" cx="136" cy="108" r="9"/></g><text x="155" y="91" font-size="47">PharmaToxAI</text>
+        </svg>
       </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
 
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#solutions">Solutions</a>
-        <a href="#workflow">Workflow</a>
-        <a href="#technology">Technology</a>
-        <a href="#validation">Validation</a>
-        <a href="#team">Team</a>
-        <a class="button button-small" href="#contact">Contact</a>
+        <a href="#solutions">Solutions</a><a href="#workflow">Workflow</a><a href="#technology">Technology</a><a href="#validation">Validation</a><a href="#team">Team</a><a class="button button-small" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -51,231 +41,58 @@
           <p class="eyebrow">AI-driven · in silico · in vitro · human-relevant</p>
           <h1>From molecular predictions to biological evidence.</h1>
           <p class="hero-lead">PharmaToxAI integrates computational toxicology, ADMET modeling and human cellular models to support earlier, better-informed decisions on compounds and ingredients.</p>
-          <div class="hero-actions">
-            <a class="button" href="#solutions">Explore our solutions</a>
-            <a class="button button-ghost" href="#contact">Discuss a compound</a>
-          </div>
-          <div class="hero-tags" aria-label="Core capabilities">
-            <span>Predictive toxicology</span>
-            <span>QSAR / QSPR</span>
-            <span>PBPK / ADME</span>
-            <span>2D / 3D cell models</span>
-          </div>
+          <div class="hero-actions"><a class="button" href="#solutions">Explore our solutions</a><a class="button button-ghost" href="#contact">Discuss a compound</a></div>
+          <div class="hero-tags" aria-label="Core capabilities"><span>Predictive toxicology</span><span>QSAR / QSPR</span><span>PBPK / ADME</span><span>2D / 3D cell models</span></div>
         </div>
 
         <div class="hero-visual reveal" aria-hidden="true">
-          <div class="visual-orbit orbit-a"></div>
-          <div class="visual-orbit orbit-b"></div>
-          <svg class="molecule" viewBox="0 0 520 520">
-            <g class="molecule-lines">
-              <path d="M126 154 206 108 286 154 286 246 206 292 126 246Z"></path>
-              <path d="M286 154 366 108 446 154 446 246 366 292 286 246Z"></path>
-              <path d="M206 292 286 246 366 292 366 384 286 430 206 384Z"></path>
-              <path d="M146 166 206 132 266 166M306 166 366 132 426 166M226 304 286 270 346 304"></path>
-            </g>
-            <g class="molecule-nodes">
-              <circle cx="126" cy="154" r="9"></circle><circle cx="206" cy="108" r="8"></circle>
-              <circle cx="286" cy="154" r="11"></circle><circle cx="366" cy="108" r="7"></circle>
-              <circle cx="446" cy="154" r="9"></circle><circle cx="446" cy="246" r="7"></circle>
-              <circle cx="366" cy="292" r="11"></circle><circle cx="366" cy="384" r="8"></circle>
-              <circle cx="286" cy="430" r="10"></circle><circle cx="206" cy="384" r="7"></circle>
-              <circle cx="206" cy="292" r="10"></circle><circle cx="126" cy="246" r="7"></circle>
-            </g>
-          </svg>
-          <div class="signal-card signal-card-a"><strong>01</strong><span>Predict</span></div>
-          <div class="signal-card signal-card-b"><strong>02</strong><span>Validate</span></div>
-          <div class="signal-card signal-card-c"><strong>03</strong><span>Decide</span></div>
+          <div class="visual-orbit orbit-a"></div><div class="visual-orbit orbit-b"></div>
+          <svg class="molecule" viewBox="0 0 520 520"><g class="molecule-lines"><path d="M126 154 206 108 286 154 286 246 206 292 126 246Z"></path><path d="M286 154 366 108 446 154 446 246 366 292 286 246Z"></path><path d="M206 292 286 246 366 292 366 384 286 430 206 384Z"></path></g></svg>
+          <svg class="logo-lockup-large" viewBox="0 0 430 150"><g transform="translate(8 4)"><path class="logo-lines" d="M70 20 112 44 112 93 70 117 28 93 28 44Z"/><path class="logo-lines" d="M112 44 136 30M28 93 10 104M112 93 132 105"/><circle class="logo-node" cx="140" cy="28" r="9"/><circle class="logo-node" cx="8" cy="106" r="9"/><circle class="logo-node" cx="136" cy="108" r="9"/></g><text x="155" y="91" font-size="47">PharmaToxAI</text></svg>
+          <div class="signal-card signal-card-a"><strong>01</strong><span>Predict</span></div><div class="signal-card signal-card-b"><strong>02</strong><span>Validate</span></div><div class="signal-card signal-card-c"><strong>03</strong><span>Decide</span></div>
         </div>
       </div>
     </section>
 
-    <section class="statement section-light">
-      <div class="container statement-grid reveal">
-        <p class="section-kicker">The problem</p>
-        <div>
-          <h2>Prediction scales. Experiments anchor reality. The useful system connects both.</h2>
-          <p>Computational models can screen large chemical spaces quickly, but confidence drops outside their domain. Experimental systems provide biological evidence, but cannot be applied indiscriminately to every candidate. PharmaToxAI is built around the feedback loop between them.</p>
-        </div>
+    <section class="statement section-light"><div class="container statement-grid reveal"><p class="section-kicker">The problem</p><div><h2>Prediction scales. Experiments anchor reality. The useful system connects both.</h2><p>Computational models can screen large chemical spaces quickly, but confidence drops outside their domain. Experimental systems provide biological evidence, but cannot be applied indiscriminately to every candidate. PharmaToxAI is built around the feedback loop between them.</p></div></div></section>
+
+    <section id="solutions" class="section"><div class="container"><div class="section-heading reveal"><p class="section-kicker">Solutions</p><h2>Early-stage evidence for compound decisions.</h2><p>Modular analyses can be used independently or combined into an integrated evaluation workflow.</p></div><div class="cards-grid">
+      <article class="service-card reveal"><span class="card-number">01</span><h3>Predictive toxicology</h3><p>AI/ML models for acute, chronic and endpoint-specific toxicity, supported by molecular fingerprints, physicochemical descriptors and curated chemical data.</p><ul><li>QSAR/QSPR modeling</li><li>Read-across support</li><li>Applicability-domain analysis</li></ul></article>
+      <article class="service-card reveal"><span class="card-number">02</span><h3>ADMET & barrier prediction</h3><p>Early characterization of pharmacokinetic behavior, bioavailability and permeability to biologically relevant barriers.</p><ul><li>PBPK / ADME simulations</li><li>Blood-brain barrier</li><li>Dermal and placental permeability</li></ul></article>
+      <article class="service-card reveal"><span class="card-number">03</span><h3>Human cellular validation</h3><p>Experimental evaluation in human cell systems when computational predictions require biological confirmation.</p><ul><li>2D cellular models</li><li>3D cellular models</li><li>Viability and functional endpoints</li></ul></article>
+      <article class="service-card reveal"><span class="card-number">04</span><h3>Compound prioritization</h3><p>Integrated computational assessment to rank candidates before committing resources to more expensive experimental stages.</p><ul><li>Lead prioritization</li><li>Molecular modeling</li><li>Go / No-Go support</li></ul></article>
+    </div></div></section>
+
+    <section id="workflow" class="section workflow-section"><div class="container"><div class="section-heading section-heading-inverse reveal"><p class="section-kicker">Workflow</p><h2>A closed loop from structure to evidence.</h2></div><div class="workflow">
+      <div class="workflow-step reveal"><span>01</span><div><h3>Define</h3><p>Compound, ingredient, formulation or candidate is characterized together with the decision that needs to be made.</p></div></div><div class="workflow-arrow">→</div>
+      <div class="workflow-step reveal"><span>02</span><div><h3>Predict</h3><p>AI/ML, QSAR/QSPR, molecular modeling and PBPK/ADME methods estimate safety and biological behavior.</p></div></div><div class="workflow-arrow">→</div>
+      <div class="workflow-step reveal"><span>03</span><div><h3>Validate</h3><p>Selected endpoints are tested in human 2D/3D cellular systems where experimental confirmation adds value.</p></div></div><div class="workflow-arrow">→</div>
+      <div class="workflow-step reveal"><span>04</span><div><h3>Integrate</h3><p>Computational and experimental evidence are interpreted together in a consolidated technical report.</p></div></div>
+    </div></div></section>
+
+    <section id="technology" class="section section-light"><div class="container technology-grid"><div class="section-heading reveal"><p class="section-kicker">Technology</p><h2>Methods selected for the question, not for the buzzword.</h2><p>The core pipeline uses established machine-learning approaches and rigorous validation, with deeper models or mechanistic simulations added when the endpoint justifies them.</p></div><div class="technology-list reveal"><div><strong>Machine learning</strong><span>XGBoost · LightGBM · Random Forest</span></div><div><strong>Molecular representation</strong><span>Fingerprints · physicochemical descriptors</span></div><div><strong>Model validation</strong><span>Scaffold split · external validation</span></div><div><strong>Cheminformatics</strong><span>QSAR · QSPR · chemical-space analysis</span></div><div><strong>Pharmacokinetics</strong><span>PBPK · ADME simulations</span></div><div><strong>Experimental models</strong><span>Human cell systems · 2D · 3D</span></div></div></div></section>
+
+    <section id="validation" class="section"><div class="container validation-grid"><div class="validation-panel reveal"><p class="section-kicker">Scientific validation</p><h2>Models are useful only when we know where they fail.</h2><p>PharmaToxAI emphasizes validation strategy as strongly as algorithm selection: scaffold-aware splits, independent external validation and iterative comparison against experimental data are used to reduce chemical memorization and expose model limits.</p></div><div class="validation-points reveal"><div><span class="dot"></span><p><strong>Applicability matters.</strong> Predictions are interpreted in the context of the chemistry represented during training.</p></div><div><span class="dot"></span><p><strong>Experimental feedback matters.</strong> In selected endpoints, predictions can be tested in cells and used to refine subsequent modeling.</p></div><div><span class="dot"></span><p><strong>Decision context matters.</strong> Outputs are structured to support early prioritization rather than replace downstream evidence.</p></div></div></div></section>
+
+    <section class="section applications-section"><div class="container"><div class="section-heading reveal"><p class="section-kicker">Applications</p><h2>Built for pharmaceutical, cosmetic and biomedical development.</h2></div><div class="application-row reveal"><div><span>Pharma</span><p>Candidate prioritization, safety profiling, ADMET characterization and preclinical decision support.</p></div><div><span>Cosmetics</span><p>Ingredient safety, dermal compatibility and animal-reduction strategies supported by predictive and human-cell methods.</p></div><div><span>Biomedical R&D</span><p>Custom computational and experimental studies for compounds, formulations and mechanistic questions.</p></div></div></div></section>
+
+    <section id="team" class="section section-light"><div class="container"><div class="section-heading reveal"><p class="section-kicker">Team</p><h2>Interdisciplinary by construction.</h2><p>PharmaToxAI combines computational modeling with experimental physiology, cell biology and human-relevant models at IFIBIO Houssay (UBA–CONICET).</p></div>
+      <div class="team-grid">
+        <article class="team-card reveal"><div class="team-head"><div class="avatar">JC</div><div><h3>Dr. Juan J. Casal</h3><p class="team-role">Computational modeling · bioinformatics · AI</p></div></div><p class="team-expertise">Pharmacist and PhD in Pharmacy. Computational drug design, molecular dynamics, scientific data analysis and machine learning.</p><div class="profile-links"><a href="https://www.linkedin.com/in/juan-jose-casal/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bicyt.conicet.gov.ar/fichas/p/en/juan-jose-casal" target="_blank" rel="noopener">CONICET profile</a><a href="mailto:jcasal@fmed.uba.ar">Email</a></div><div class="recent-pubs"><h4>Recent publications</h4><div class="pub-list"><a class="pub-item" href="https://doi.org/10.1016/j.neuint.2026.106180" target="_blank" rel="noopener">TDP-43 expression in the cytoplasm leads to early synaptic and mitochondrial abnormalities in an inducible mouse model of ALS/FTD<span>Neurochemistry International · 2026</span></a><a class="pub-item" href="https://doi.org/10.1007/s11010-026-05511-3" target="_blank" rel="noopener">Targeting pH regulation in cancer: combined mild alkaline treatment and NHE1 inhibition as a potential therapy for clear cell renal cell carcinoma<span>Molecular and Cellular Biochemistry · 2026</span></a><a class="pub-item" href="https://doi.org/10.1002/jcp.70127" target="_blank" rel="noopener">TRPV4 Orchestrates Distinct Calcium and Cell Growth Responses in Non-Tumorigenic and Clear Cell Renal Carcinoma-Derived Cells<span>Journal of Cellular Physiology · 2025</span></a></div></div></article>
+
+        <article class="team-card reveal"><div class="team-head"><div class="avatar">GD</div><div><h3>Dr. Gisela Di Giusto</h3><p class="team-role">Cell physiology · aquaporins · experimental models</p></div></div><p class="team-expertise">CONICET Adjunct Researcher. Cellular and molecular pathophysiology, renal physiology, cell migration and 2D/3D experimental systems.</p><div class="profile-links"><a href="https://www.linkedin.com/in/giseladigiusto/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bicyt.conicet.gov.ar/fichas/p/gisela-di-giusto" target="_blank" rel="noopener">CONICET profile</a><a href="mailto:gdigiusto@fmed.uba.ar">Email</a></div><div class="recent-pubs"><h4>Recent publications</h4><div class="pub-list"><a class="pub-item" href="https://doi.org/10.1016/j.exer.2026.110992" target="_blank" rel="noopener">Aquaporin-4 participates in the migration of retinal Müller cells by facilitating water transport and cytoskeleton reorganization<span>Experimental Eye Research · 2026</span></a><a class="pub-item" href="https://doi.org/10.1007/s11010-026-05511-3" target="_blank" rel="noopener">Targeting pH regulation in cancer: combined mild alkaline treatment and NHE1 inhibition as a potential therapy for clear cell renal cell carcinoma<span>Molecular and Cellular Biochemistry · 2026</span></a><a class="pub-item" href="https://doi.org/10.1002/jcp.70127" target="_blank" rel="noopener">TRPV4 Orchestrates Distinct Calcium and Cell Growth Responses in Non-Tumorigenic and Clear Cell Renal Carcinoma-Derived Cells<span>Journal of Cellular Physiology · 2025</span></a></div></div></article>
+
+        <article class="team-card reveal"><div class="team-head"><div class="avatar">VR</div><div><h3>Dr. Valeria Rivarola</h3><p class="team-role">Renal cell physiology · cancer biology · 3D models</p></div></div><p class="team-expertise">CONICET Adjunct Researcher. Cellular physiology, acid-base regulation, aquaporins, renal cancer and experimental cell systems.</p><div class="profile-links"><a href="https://www.linkedin.com/in/valeria-rivarola-6800ab41/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bicyt.conicet.gov.ar/fichas/p/valeria-rivarola" target="_blank" rel="noopener">CONICET profile</a><a href="mailto:mariv@fmed.uba.ar">Email</a></div><div class="recent-pubs"><h4>Recent publications</h4><div class="pub-list"><a class="pub-item" href="https://doi.org/10.1007/s11010-026-05511-3" target="_blank" rel="noopener">Targeting pH regulation in cancer: combined mild alkaline treatment and NHE1 inhibition as a potential therapy for clear cell renal cell carcinoma<span>Molecular and Cellular Biochemistry · 2026</span></a><a class="pub-item" href="https://doi.org/10.1002/jcp.70127" target="_blank" rel="noopener">TRPV4 Orchestrates Distinct Calcium and Cell Growth Responses in Non-Tumorigenic and Clear Cell Renal Carcinoma-Derived Cells<span>Journal of Cellular Physiology · 2025</span></a><a class="pub-item" href="https://doi.org/10.1002/jcp.30013" target="_blank" rel="noopener">Release of ATP by TRPV4 activation is dependent upon the expression of AQP2 in renal cells<span>Journal of Cellular Physiology · 2021</span></a></div></div></article>
+
+        <article class="team-card reveal"><div class="team-head"><div class="avatar">NM</div><div><h3>Dr. Nora Alicia Martínez</h3><p class="team-role">Placental biology · vascular development · human cell models</p></div></div><p class="team-expertise">CONICET Adjunct Researcher. Molecular mechanisms of human placental vasculature development and its dysregulation in preeclampsia.</p><div class="profile-links"><a href="https://www.linkedin.com/in/noraaliciamartinez/" target="_blank" rel="noopener">LinkedIn</a><a href="https://bicyt.conicet.gov.ar/fichas/p/nora-alicia-martinez" target="_blank" rel="noopener">CONICET profile</a></div><div class="recent-pubs"><h4>Recent publications</h4><div class="pub-list"><a class="pub-item" href="https://doi.org/10.1016/j.bbamcr.2024.119866" target="_blank" rel="noopener">Involvement of aquaporins in Shiga toxin-induced swelling and water transport dysfunction in human renal microvascular endothelial cells<span>BBA Molecular Cell Research · 2025</span></a><a class="pub-item" href="https://doi.org/10.3389/fphys.2021.785219" target="_blank" rel="noopener">Assessing the Role of Uric Acid as a Predictor of Preeclampsia<span>Frontiers in Physiology · 2022</span></a><a class="pub-item" href="https://doi.org/10.3389/fphys.2021.760163" target="_blank" rel="noopener">Hyperosmolarity Impairs Human Extravillous Trophoblast Differentiation by Caveolae Internalization<span>Frontiers in Physiology · 2021</span></a></div></div></article>
       </div>
-    </section>
+      <p class="team-note reveal">Publication selection is limited to recent peer-reviewed journal articles verified from public bibliographic records; full production histories are linked through each CONICET profile.</p>
+    </div></section>
 
-    <section id="solutions" class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Solutions</p>
-          <h2>Early-stage evidence for compound decisions.</h2>
-          <p>Modular analyses can be used independently or combined into an integrated evaluation workflow.</p>
-        </div>
-
-        <div class="cards-grid">
-          <article class="service-card reveal">
-            <span class="card-number">01</span>
-            <h3>Predictive toxicology</h3>
-            <p>AI/ML models for acute, chronic and endpoint-specific toxicity, supported by molecular fingerprints, physicochemical descriptors and curated chemical data.</p>
-            <ul><li>QSAR/QSPR modeling</li><li>Read-across support</li><li>Applicability-domain analysis</li></ul>
-          </article>
-          <article class="service-card reveal">
-            <span class="card-number">02</span>
-            <h3>ADMET & barrier prediction</h3>
-            <p>Early characterization of pharmacokinetic behavior, bioavailability and permeability to biologically relevant barriers.</p>
-            <ul><li>PBPK / ADME simulations</li><li>Blood-brain barrier</li><li>Dermal and placental permeability</li></ul>
-          </article>
-          <article class="service-card reveal">
-            <span class="card-number">03</span>
-            <h3>Human cellular validation</h3>
-            <p>Experimental evaluation in human cell systems when computational predictions require biological confirmation.</p>
-            <ul><li>2D cellular models</li><li>3D cellular models</li><li>Viability and functional endpoints</li></ul>
-          </article>
-          <article class="service-card reveal">
-            <span class="card-number">04</span>
-            <h3>Compound prioritization</h3>
-            <p>Integrated computational assessment to rank candidates before committing resources to more expensive experimental stages.</p>
-            <ul><li>Lead prioritization</li><li>Molecular modeling</li><li>Go / No-Go support</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="workflow" class="section workflow-section">
-      <div class="container">
-        <div class="section-heading section-heading-inverse reveal">
-          <p class="section-kicker">Workflow</p>
-          <h2>A closed loop from structure to evidence.</h2>
-        </div>
-
-        <div class="workflow">
-          <div class="workflow-step reveal">
-            <span>01</span>
-            <div><h3>Define</h3><p>Compound, ingredient, formulation or candidate is characterized together with the decision that needs to be made.</p></div>
-          </div>
-          <div class="workflow-arrow" aria-hidden="true">→</div>
-          <div class="workflow-step reveal">
-            <span>02</span>
-            <div><h3>Predict</h3><p>AI/ML, QSAR/QSPR, molecular modeling and PBPK/ADME methods estimate safety and biological behavior.</p></div>
-          </div>
-          <div class="workflow-arrow" aria-hidden="true">→</div>
-          <div class="workflow-step reveal">
-            <span>03</span>
-            <div><h3>Validate</h3><p>Selected endpoints are tested in human 2D/3D cellular systems where experimental confirmation adds value.</p></div>
-          </div>
-          <div class="workflow-arrow" aria-hidden="true">→</div>
-          <div class="workflow-step reveal">
-            <span>04</span>
-            <div><h3>Integrate</h3><p>Computational and experimental evidence are interpreted together in a consolidated technical report.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="technology" class="section section-light">
-      <div class="container technology-grid">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Technology</p>
-          <h2>Methods selected for the question, not for the buzzword.</h2>
-          <p>The core pipeline uses established machine-learning approaches and rigorous validation, with deeper models or mechanistic simulations added when the endpoint justifies them.</p>
-        </div>
-
-        <div class="technology-list reveal">
-          <div><strong>Machine learning</strong><span>XGBoost · LightGBM · Random Forest</span></div>
-          <div><strong>Molecular representation</strong><span>Fingerprints · physicochemical descriptors</span></div>
-          <div><strong>Model validation</strong><span>Scaffold split · external validation</span></div>
-          <div><strong>Cheminformatics</strong><span>QSAR · QSPR · chemical-space analysis</span></div>
-          <div><strong>Pharmacokinetics</strong><span>PBPK · ADME simulations</span></div>
-          <div><strong>Experimental models</strong><span>Human cell systems · 2D · 3D</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="validation" class="section">
-      <div class="container validation-grid">
-        <div class="validation-panel reveal">
-          <p class="section-kicker">Scientific validation</p>
-          <h2>Models are useful only when we know where they fail.</h2>
-          <p>PharmaToxAI emphasizes validation strategy as strongly as algorithm selection: scaffold-aware splits, independent external validation and iterative comparison against experimental data are used to reduce chemical memorization and expose model limits.</p>
-        </div>
-        <div class="validation-points reveal">
-          <div><span class="dot"></span><p><strong>Applicability matters.</strong> Predictions are interpreted in the context of the chemistry represented during training.</p></div>
-          <div><span class="dot"></span><p><strong>Experimental feedback matters.</strong> In selected endpoints, predictions can be tested in cells and used to refine subsequent modeling.</p></div>
-          <div><span class="dot"></span><p><strong>Decision context matters.</strong> Outputs are structured to support early prioritization rather than replace downstream evidence.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section applications-section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Applications</p>
-          <h2>Built for pharmaceutical, cosmetic and biomedical development.</h2>
-        </div>
-        <div class="application-row reveal">
-          <div><span>Pharma</span><p>Candidate prioritization, safety profiling, ADMET characterization and preclinical decision support.</p></div>
-          <div><span>Cosmetics</span><p>Ingredient safety, dermal compatibility and animal-reduction strategies supported by predictive and human-cell methods.</p></div>
-          <div><span>Biomedical R&D</span><p>Custom computational and experimental studies for compounds, formulations and mechanistic questions.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="section section-light">
-      <div class="container">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Team</p>
-          <h2>Interdisciplinary by construction.</h2>
-          <p>PharmaToxAI brings together pharmacy, chemistry, biology, biotechnology, bioinformatics and artificial intelligence around a common preclinical workflow.</p>
-        </div>
-
-        <div class="team-grid">
-          <article class="team-card reveal">
-            <div class="avatar">JC</div>
-            <h3>Dr. Juan J. Casal</h3>
-            <p>Computational modeling · bioinformatics · AI</p>
-            <a href="mailto:jcasal@fmed.uba.ar">jcasal@fmed.uba.ar</a>
-          </article>
-          <article class="team-card reveal">
-            <div class="avatar">GD</div>
-            <h3>Dr. Gisela Di Giusto</h3>
-            <p>Cell biology · experimental models</p>
-            <a href="mailto:gdigiusto@fmed.uba.ar">gdigiusto@fmed.uba.ar</a>
-          </article>
-          <article class="team-card reveal">
-            <div class="avatar">VR</div>
-            <h3>Dr. Valeria Rivarola</h3>
-            <p>Biology · translational research</p>
-            <a href="mailto:mariv@fmed.uba.ar">mariv@fmed.uba.ar</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <div class="container contact-grid reveal">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2>Have a compound or development question?</h2>
-          <p>Tell us what decision you need to make and what data you already have. We can define the appropriate computational, experimental or integrated evaluation strategy.</p>
-        </div>
-        <div class="contact-actions">
-          <a class="button button-light" href="mailto:jcasal@fmed.uba.ar?subject=PharmaToxAI%20inquiry">Start a conversation</a>
-          <p>IFIBIO Houssay · UBA–CONICET · Buenos Aires, Argentina</p>
-        </div>
-      </div>
-    </section>
+    <section id="contact" class="contact-section"><div class="container contact-grid reveal"><div><p class="section-kicker">Contact</p><h2>Have a compound or development question?</h2><p>Tell us what decision you need to make and what data you already have. We can define the appropriate computational, experimental or integrated evaluation strategy.</p></div><div class="contact-actions"><a class="button button-light" href="mailto:jcasal@fmed.uba.ar?subject=PharmaToxAI%20inquiry">Start a conversation</a><p>IFIBIO Houssay · UBA–CONICET · Buenos Aires, Argentina</p></div></div></section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand brand-footer" href="#top"><span>PharmaToxAI</span></a>
-        <p>Modern preclinical. Ethical by design.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#solutions">Solutions</a>
-        <a href="#technology">Technology</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <p class="footer-note">© <span id="year"></span> PharmaToxAI</p>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand brand-footer" href="#top"><svg class="brand-logo" viewBox="0 0 430 150" aria-label="PharmaToxAI"><g transform="translate(8 4)"><path class="logo-lines" d="M70 20 112 44 112 93 70 117 28 93 28 44Z"/><path class="logo-lines" d="M112 44 136 30M28 93 10 104M112 93 132 105"/><circle class="logo-node" cx="140" cy="28" r="9"/><circle class="logo-node" cx="8" cy="106" r="9"/><circle class="logo-node" cx="136" cy="108" r="9"/></g><text x="155" y="91" font-size="47">PharmaToxAI</text></svg></a><p>Modern preclinical. Ethical by design.</p></div><div class="footer-links"><a href="#solutions">Solutions</a><a href="#technology">Technology</a><a href="#team">Team</a><a href="#contact">Contact</a></div><p class="footer-note">© <span id="year"></span> PharmaToxAI</p></div></footer>
 
   <script src="script.js"></script>
 </body>
