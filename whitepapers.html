@@ -1,0 +1,38 @@
+---
+layout: default
+title: White papers
+description: PharmaToxAI technical white papers and scientific resources.
+permalink: /whitepapers/
+---
+<section class="content-hero section-light">
+  <div class="container narrow">
+    <p class="section-kicker">Resources</p>
+    <h1>White papers</h1>
+    <p class="content-lead">Technical notes, methodological reports and scientific resources. Add a Markdown file to <code>_whitepapers/</code> and it will appear here automatically.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container narrow">
+    {% assign papers = site.whitepapers | where_exp: 'item', 'item.published != false' | sort: 'date' | reverse %}
+    {% if papers.size > 0 %}
+      <div class="resource-grid">
+        {% for paper in papers %}
+          <article class="resource-card reveal">
+            <p class="section-kicker">{{ paper.date | date: '%Y' }}</p>
+            <h2><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h2>
+            {% if paper.summary %}<p>{{ paper.summary }}</p>{% endif %}
+            <div class="resource-actions">
+              <a href="{{ paper.url | relative_url }}">Read online</a>
+              {% if paper.pdf %}<a href="{{ paper.pdf | relative_url }}">PDF</a>{% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state">
+        <h2>White papers are being prepared.</h2>
+        <p>The infrastructure is already active; publishing the first resource only requires adding a Markdown file and, optionally, a PDF.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>
