@@ -1,24 +1,41 @@
 # PharmaToxAI web
 
-Static corporate website for PharmaToxAI.
+Corporate website for PharmaToxAI, built with Jekyll and published with GitHub Pages.
 
-## Structure
+The site is intentionally data-driven so routine scientific and corporate updates do not require editing the layout.
 
-- `index.html` — landing page and content
-- `styles.css` — responsive visual system
-- `script.js` — mobile navigation and lightweight reveal interactions
-- `.nojekyll` — direct static serving on GitHub Pages
+## Main content sources
+
+- `_data/company.yml` — company metadata, hero copy, contact and corporate LinkedIn
+- `_data/navigation.yml` — navigation
+- `_data/services.yml` — solutions and service cards
+- `_data/team.yml` — team profiles
+- `_data/publications.csv` — publication database
+- `_whitepapers/` — Markdown white papers
+- `index.html` — home-page structure and longer fixed copy
+
+See [`CONTENT_GUIDE.md`](CONTENT_GUIDE.md) for the editing workflow.
+
+## Jekyll structure
+
+- `_layouts/default.html` — global HTML shell
+- `_layouts/whitepaper.html` — white paper page layout
+- `_includes/` — reusable header, footer, logo and team cards
+- `publications.html` — automatically generated publication index
+- `whitepapers.html` — automatically generated white-paper index
+- `styles.css` — original visual system
+- `jekyll.css` — Jekyll/content-page extensions
+- `script.js` — navigation and reveal interactions
 
 ## Local preview
 
-Open `index.html` directly in a browser or run a local HTTP server, for example:
-
 ```bash
-python -m http.server 8000
+bundle install
+bundle exec jekyll serve --livereload
 ```
 
-Then open `http://localhost:8000`.
+Open `http://127.0.0.1:4000`.
 
-## GitHub Pages
+## Deployment
 
-The site is designed to be served directly from the repository root on the `main` branch.
+GitHub Pages builds the Jekyll site from `main`. The custom domain is preserved by `CNAME` as `pharmatoxai.ar`.
