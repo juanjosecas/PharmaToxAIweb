@@ -1,0 +1,35 @@
+- id: casal
+  initials: JC
+  name: Dr. Juan J. Casal
+  role: Computational modeling · bioinformatics · AI
+  expertise: Pharmacist and PhD in Pharmacy. Computational drug design, molecular dynamics, scientific data analysis and machine learning.
+  linkedin: https://www.linkedin.com/in/juan-jose-casal/
+  conicet: https://bicyt.conicet.gov.ar/fichas/p/en/juan-jose-casal
+  email: jcasal@fmed.uba.ar
+
+- id: digiusto
+  initials: GD
+  name: Dr. Gisela Di Giusto
+  role: Cell physiology · aquaporins · experimental models
+  expertise: CONICET Adjunct Researcher. Cellular and molecular pathophysiology, renal physiology, cell migration and 2D/3D experimental systems.
+  linkedin: https://www.linkedin.com/in/giseladigiusto/
+  conicet: https://bicyt.conicet.gov.ar/fichas/p/gisela-di-giusto
+  email: gdigiusto@fmed.uba.ar
+
+- id: rivarola
+  initials: VR
+  name: Dr. Valeria Rivarola
+  role: Renal cell physiology · cancer biology · 3D models
+  expertise: CONICET Adjunct Researcher. Cellular physiology, acid-base regulation, aquaporins, renal cancer and experimental cell systems.
+  linkedin: https://www.linkedin.com/in/valeria-rivarola-6800ab41/
+  conicet: https://bicyt.conicet.gov.ar/fichas/p/valeria-rivarola
+  email: mariv@fmed.uba.ar
+
+- id: martinez
+  initials: NM
+  name: Dr. Nora Alicia Martínez
+  role: Placental biology · vascular development · human cell models
+  expertise: CONICET Adjunct Researcher. Molecular mechanisms of human placental vasculature development and its dysregulation in preeclampsia.
+  linkedin: https://www.linkedin.com/in/noraaliciamartinez/
+  conicet: https://bicyt.conicet.gov.ar/fichas/p/nora-alicia-martinez
+  email: ""
