@@ -1,0 +1,35 @@
+- number: "01"
+  title: Predictive toxicology
+  description: AI/ML models for acute, chronic and endpoint-specific toxicity, supported by molecular fingerprints, physicochemical descriptors and curated chemical data.
+  features:
+    - QSAR/QSPR modeling
+    - Read-across support
+    - Applicability-domain analysis
+
+- number: "02"
+  title: ADMET & barrier prediction
+  description: Early characterization of pharmacokinetic behavior, bioavailability and permeability to biologically relevant barriers.
+  features:
+    - PBPK / ADME simulations
+    - Blood-brain barrier
+    - Dermal and placental permeability
+
+- number: "03"
+  title: Human cellular validation
+  description: Experimental evaluation in human cell systems when computational predictions require biological confirmation.
+  features:
+    - 2D cellular models
+    - 3D cellular models
+    - Viability and functional endpoints
+  image: https://images.pexels.com/photos/3992927/pexels-photo-3992927.jpeg?auto=compress&cs=tinysrgb&w=1200
+  image_alt: Cell culture work in a laboratory using multiwell plates and pipetting
+  credit_label: CDC / Pexels
+  credit_url: https://www.pexels.com/photo/person-doing-an-experiment-3992927/
+
+- number: "04"
+  title: Compound prioritization
+  description: Integrated computational assessment to rank candidates before committing resources to more expensive experimental stages.
+  features:
+    - Lead prioritization
+    - Molecular modeling
+    - Go / No-Go support
