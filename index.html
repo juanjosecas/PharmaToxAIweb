@@ -115,7 +115,7 @@ description: AI-driven predictive toxicology and human-relevant experimental val
 
 <section class="section science-section">
   <div class="container">
-    <div class="section-heading reveal"><p class="section-kicker">Science & resources</p><h2>Evidence that can be inspected.</h2><p>Publications are generated from a CSV; white papers are generated from Markdown. Updating either no longer requires touching the page layout.</p></div>
+    <div class="section-heading reveal"><p class="section-kicker">Science & resources</p><h2>Evidence that can be inspected.</h2><p>Selected peer-reviewed publications and technical resources supporting the scientific basis of our work.</p></div>
     <div class="science-grid">
       <div class="science-panel reveal">
         <div class="panel-heading"><h3>Recent publications</h3><a href="{{ '/publications/' | relative_url }}">View all</a></div>
@@ -130,7 +130,7 @@ description: AI-driven predictive toxicology and human-relevant experimental val
         {% if public_whitepapers.size > 0 %}
           {% for paper in public_whitepapers limit:3 %}<a class="science-item" href="{{ paper.url | relative_url }}"><strong>{{ paper.title }}</strong><span>{{ paper.date | date: '%Y' }}</span></a>{% endfor %}
         {% else %}
-          <div class="science-empty"><strong>Resource library ready.</strong><span>Add a Markdown file to publish the first white paper.</span></div>
+          <div class="science-empty"><strong>Technical resources</strong><span>White papers and methodological notes will be published here.</span></div>
         {% endif %}
       </div>
     </div>
@@ -141,7 +141,6 @@ description: AI-driven predictive toxicology and human-relevant experimental val
   <div class="container">
     <div class="section-heading reveal"><p class="section-kicker">Team</p><h2>Interdisciplinary by construction.</h2><p>PharmaToxAI combines computational modeling with experimental physiology, cell biology and human-relevant models at IFIBIO Houssay (UBA–CONICET).</p></div>
     <div class="team-grid">{% for member in site.data.team %}{% include team-card.html member=member %}{% endfor %}</div>
-    <p class="team-note reveal">Team profiles are maintained in <code>_data/team.yml</code>; publication cards are selected automatically from <code>_data/publications.csv</code>.</p>
   </div>
 </section>
 
