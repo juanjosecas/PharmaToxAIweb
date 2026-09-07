@@ -27,4 +27,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - CONTENT_GUIDE.md
+  - MANUAL_INTERNO.md
   - LICENSE
