@@ -1,0 +1,15 @@
+- label: Solutions
+  url: /#solutions
+- label: Workflow
+  url: /#workflow
+- label: Technology
+  url: /#technology
+- label: Publications
+  url: /publications/
+- label: White papers
+  url: /whitepapers/
+- label: Team
+  url: /#team
+- label: Contact
+  url: /#contact
+  button: true
