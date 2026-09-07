@@ -1,0 +1,30 @@
+title: PharmaToxAI
+description: AI-driven predictive toxicology and human-relevant experimental validation for early compound evaluation.
+url: https://pharmatoxai.ar
+baseurl: ""
+lang: en
+permalink: pretty
+markdown: kramdown
+
+collections:
+  whitepapers:
+    output: true
+    permalink: /whitepapers/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: whitepapers
+    values:
+      layout: whitepaper
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CONTENT_GUIDE.md
+  - LICENSE
