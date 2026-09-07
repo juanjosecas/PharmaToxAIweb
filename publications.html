@@ -1,0 +1,34 @@
+---
+layout: default
+title: Publications
+description: Recent peer-reviewed publications from the PharmaToxAI team.
+permalink: /publications/
+---
+<section class="content-hero section-light">
+  <div class="container narrow">
+    <p class="section-kicker">Science</p>
+    <h1>Publications</h1>
+    <p class="content-lead">Peer-reviewed work from the PharmaToxAI team. This page is generated directly from <code>_data/publications.csv</code>.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container narrow">
+    {% assign sorted_pubs = site.data.publications | sort: 'year' | reverse %}
+    <div class="publication-index">
+      {% for paper in sorted_pubs %}
+        <article class="publication-row">
+          <div class="publication-year">{{ paper.year }}</div>
+          <div>
+            <h2><a href="{{ paper.doi }}" target="_blank" rel="noopener">{{ paper.title }}</a></h2>
+            <p>{{ paper.journal }}</p>
+            <div class="publication-members">
+              {% for member in site.data.team %}
+                {% if paper.members contains member.id %}<span>{{ member.name | remove: 'Dr. ' }}</span>{% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
