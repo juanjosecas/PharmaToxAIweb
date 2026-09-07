@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<section class="content-hero section-light">
+  <div class="container narrow">
+    <p class="section-kicker">White paper</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="content-lead">{{ page.summary }}</p>{% endif %}
+    <div class="content-meta">
+      {% if page.authors %}<span>{{ page.authors | join: ', ' }}</span>{% endif %}
+      {% if page.date %}<span>{{ page.date | date: '%Y-%m-%d' }}</span>{% endif %}
+    </div>
+    {% if page.pdf %}<a class="button" href="{{ page.pdf | relative_url }}">Download PDF</a>{% endif %}
+  </div>
+</section>
+<section class="section article-section">
+  <article class="container narrow prose">
+    {{ content }}
+  </article>
+</section>
