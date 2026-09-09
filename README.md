@@ -10,19 +10,22 @@ The site is intentionally data-driven so routine scientific and corporate update
 - `_data/navigation.yml` — navigation
 - `_data/services.yml` — solutions and service cards
 - `_data/team.yml` — team profiles
-- `_data/publications.csv` — publication database
-- `_whitepapers/` — Markdown white papers
+- `_data/publications.csv` — curated publication database
+- `_whitepapers/` — published Markdown white papers
+- `_templates/` — internal content templates excluded from the public site
 - `index.html` — home-page structure and longer fixed copy
 
-See [`CONTENT_GUIDE.md`](CONTENT_GUIDE.md) for the editing workflow.
+The home page uses publications only as a short preview; the dedicated `/publications/` page contains the full curated list used by the site. White-paper navigation is shown only when at least one public white paper exists.
+
+See [`CONTENT_GUIDE.md`](CONTENT_GUIDE.md) and [`MANUAL_INTERNO.md`](MANUAL_INTERNO.md) for the editing workflow.
 
 ## Jekyll structure
 
 - `_layouts/default.html` — global HTML shell
 - `_layouts/whitepaper.html` — white paper page layout
 - `_includes/` — reusable header, footer, logo and team cards
-- `publications.html` — automatically generated publication index
-- `whitepapers.html` — automatically generated white-paper index
+- `publications.html` — generated publication index
+- `whitepapers.html` — generated white-paper index
 - `styles.css` — original visual system
 - `jekyll.css` — Jekyll/content-page extensions
 - `script.js` — navigation and reveal interactions
