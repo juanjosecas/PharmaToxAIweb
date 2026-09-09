@@ -26,7 +26,7 @@ p009,"Paper title",Journal Name,2027,https://doi.org/...,casal|digiusto
 
 `members` uses the IDs defined in `_data/team.yml` separated by `|`.
 
-The home page automatically shows the three newest records overall. Each team card automatically shows the three newest records associated with that member. `/publications/` shows the complete list.
+The home page automatically shows only the three newest records as a preview. `/publications/` contains the complete curated list used by the site. Publications are not repeated inside the team cards.
 
 ## Add or edit a team member
 
@@ -42,6 +42,8 @@ Edit `_data/team.yml`. No HTML changes are required.
   conicet: https://bicyt.conicet.gov.ar/...
   email: name@example.org
 ```
+
+The public team cards show the scientific description plus LinkedIn and CONICET profile links. General inquiries are routed through the PharmaToxAI contact email in `_data/company.yml`.
 
 ## Add a service
 
@@ -62,7 +64,7 @@ Edit `_data/services.yml`. A service can optionally include an image and attribu
 
 ## Publish a white paper
 
-Copy `_whitepapers/whitepaper-template.md`, rename it, edit the front matter and set `published: true`.
+Copy `_templates/whitepaper-template.md` into `_whitepapers/`, rename it, replace every placeholder and set `published: true`.
 
 ```yaml
 ---
@@ -78,6 +80,8 @@ published: true
 ```
 
 Write the body in Markdown. If there is a downloadable PDF, place it under `assets/whitepapers/` and reference it in `pdf`.
+
+The internal template is outside the public collection and is excluded from the Jekyll build. White-paper links are hidden from the public navigation until at least one published white paper exists.
 
 ## Deploy
 
