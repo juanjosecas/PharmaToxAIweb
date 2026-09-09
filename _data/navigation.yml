@@ -8,6 +8,7 @@
   url: /publications/
 - label: White papers
   url: /whitepapers/
+  requires_whitepapers: true
 - label: Team
   url: /#team
 - label: Contact
