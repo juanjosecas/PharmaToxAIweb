@@ -28,4 +28,5 @@ exclude:
   - README.md
   - CONTENT_GUIDE.md
   - MANUAL_INTERNO.md
+  - _templates
   - LICENSE
