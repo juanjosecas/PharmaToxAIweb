@@ -1,15 +1,19 @@
 <!doctype html>
 <html lang="{{ site.lang | default: 'en' }}">
 <head>
+  {% assign public_whitepapers = site.whitepapers | where_exp: 'item', 'item.published != false' %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a8f5b">
   <title>{% if page.title and page.title != 'Home' %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  {% if page.url == '/whitepapers/' and public_whitepapers.size == 0 %}<meta name="robots" content="noindex,follow">{% endif %}
   <meta property="og:title" content="{% if page.title and page.title != 'Home' %}{{ page.title }} · {% endif %}{{ site.title }}">
   <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="twitter:card" content="summary">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
