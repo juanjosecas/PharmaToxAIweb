@@ -1,3 +1,4 @@
+{% assign public_whitepapers = site.whitepapers | where_exp: 'item', 'item.published != false' %}
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
@@ -6,9 +7,9 @@
     </div>
     <div class="footer-links">
       <a href="{{ '/publications/' | relative_url }}">Publications</a>
-      <a href="{{ '/whitepapers/' | relative_url }}">White papers</a>
+      {% if public_whitepapers.size > 0 %}<a href="{{ '/whitepapers/' | relative_url }}">White papers</a>{% endif %}
       <a href="{{ site.data.company.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="{{ '/#contact' | relative_url }}">Contact</a>
+      <a href="mailto:{{ site.data.company.email }}">Contact</a>
     </div>
     <p class="footer-note">© <span id="year"></span> {{ site.data.company.name }}</p>
   </div>
