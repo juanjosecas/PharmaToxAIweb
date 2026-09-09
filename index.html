@@ -113,10 +113,15 @@ description: AI-driven predictive toxicology and human-relevant experimental val
   </div>
 </section>
 
+{% assign public_whitepapers = site.whitepapers | where_exp: 'item', 'item.published != false' | sort: 'date' | reverse %}
 <section class="section science-section">
   <div class="container">
-    <div class="section-heading reveal"><p class="section-kicker">Science & resources</p><h2>Evidence that can be inspected.</h2><p>Selected peer-reviewed publications and technical resources supporting the scientific basis of our work.</p></div>
-    <div class="science-grid">
+    <div class="section-heading reveal">
+      <p class="section-kicker">Scientific foundation</p>
+      <h2>Research behind the platform.</h2>
+      <p>Selected peer-reviewed work from our team provides scientific context for the computational and experimental approaches used across PharmaToxAI.</p>
+    </div>
+    <div class="science-grid{% if public_whitepapers.size == 0 %} science-grid-single{% endif %}">
       <div class="science-panel reveal">
         <div class="panel-heading"><h3>Recent publications</h3><a href="{{ '/publications/' | relative_url }}">View all</a></div>
         {% assign recent_pubs = site.data.publications | sort: 'year' | reverse %}
@@ -124,15 +129,12 @@ description: AI-driven predictive toxicology and human-relevant experimental val
           <a class="science-item" href="{{ paper.doi }}" target="_blank" rel="noopener"><strong>{{ paper.title }}</strong><span>{{ paper.journal }} · {{ paper.year }}</span></a>
         {% endfor %}
       </div>
-      <div class="science-panel reveal">
-        <div class="panel-heading"><h3>White papers</h3><a href="{{ '/whitepapers/' | relative_url }}">View all</a></div>
-        {% assign public_whitepapers = site.whitepapers | where_exp: 'item', 'item.published != false' | sort: 'date' | reverse %}
-        {% if public_whitepapers.size > 0 %}
+      {% if public_whitepapers.size > 0 %}
+        <div class="science-panel reveal">
+          <div class="panel-heading"><h3>White papers</h3><a href="{{ '/whitepapers/' | relative_url }}">View all</a></div>
           {% for paper in public_whitepapers limit:3 %}<a class="science-item" href="{{ paper.url | relative_url }}"><strong>{{ paper.title }}</strong><span>{{ paper.date | date: '%Y' }}</span></a>{% endfor %}
-        {% else %}
-          <div class="science-empty"><strong>Technical resources</strong><span>White papers and methodological notes will be published here.</span></div>
-        {% endif %}
-      </div>
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>
@@ -148,7 +150,8 @@ description: AI-driven predictive toxicology and human-relevant experimental val
   <div class="container contact-grid reveal">
     <div><p class="section-kicker">Contact</p><h2>Have a compound or development question?</h2><p>Tell us what decision you need to make and what data you already have. We can define the appropriate computational, experimental or integrated evaluation strategy.</p></div>
     <div class="contact-actions">
-      <a class="button button-light" href="mailto:{{ site.data.company.email }}?subject=PharmaToxAI%20inquiry">Start a conversation</a>
+      <a class="button button-light" href="mailto:{{ site.data.company.email }}?subject=PharmaToxAI%20inquiry">Contact PharmaToxAI</a>
+      <a class="contact-link" href="mailto:{{ site.data.company.email }}">{{ site.data.company.email }}</a>
       <a class="contact-link" href="{{ site.data.company.linkedin }}" target="_blank" rel="noopener">PharmaToxAI on LinkedIn</a>
       <p>{{ site.data.company.affiliation }} · {{ site.data.company.location }}</p>
     </div>
