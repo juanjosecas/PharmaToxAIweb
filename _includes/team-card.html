@@ -13,23 +13,5 @@
   <div class="profile-links">
     {% if member.linkedin and member.linkedin != '' %}<a href="{{ member.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
     {% if member.conicet and member.conicet != '' %}<a href="{{ member.conicet }}" target="_blank" rel="noopener">CONICET profile</a>{% endif %}
-    {% if member.email and member.email != '' %}<a href="mailto:{{ member.email }}">Email</a>{% endif %}
-  </div>
-
-  <div class="recent-pubs">
-    <h4>Recent publications</h4>
-    <div class="pub-list">
-      {% assign sorted_pubs = site.data.publications | sort: 'year' | reverse %}
-      {% assign shown = 0 %}
-      {% for paper in sorted_pubs %}
-        {% if paper.members contains member.id and shown < 3 %}
-          <a class="pub-item" href="{{ paper.doi }}" target="_blank" rel="noopener">
-            {{ paper.title }}
-            <span>{{ paper.journal }} · {{ paper.year }}</span>
-          </a>
-          {% assign shown = shown | plus: 1 %}
-        {% endif %}
-      {% endfor %}
-    </div>
   </div>
 </article>
