@@ -1,3 +1,4 @@
+{% assign public_whitepapers = site.whitepapers | where_exp: 'item', 'item.published != false' %}
 <header class="site-header" id="top">
   <div class="container nav-wrap">
     <a class="brand" href="{{ '/' | relative_url }}" aria-label="PharmaToxAI home">
@@ -10,7 +11,13 @@
 
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
       {% for item in site.data.navigation %}
-        <a href="{{ item.url | relative_url }}"{% if item.button %} class="button button-small"{% endif %}>{{ item.label }}</a>
+        {% if item.requires_whitepapers %}
+          {% if public_whitepapers.size > 0 %}
+            <a href="{{ item.url | relative_url }}"{% if item.button %} class="button button-small"{% endif %}>{{ item.label }}</a>
+          {% endif %}
+        {% else %}
+          <a href="{{ item.url | relative_url }}"{% if item.button %} class="button button-small"{% endif %}>{{ item.label }}</a>
+        {% endif %}
       {% endfor %}
     </nav>
   </div>
