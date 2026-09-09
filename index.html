@@ -113,32 +113,6 @@ description: AI-driven predictive toxicology and human-relevant experimental val
   </div>
 </section>
 
-{% assign public_whitepapers = site.whitepapers | where_exp: 'item', 'item.published != false' | sort: 'date' | reverse %}
-<section class="section science-section">
-  <div class="container">
-    <div class="section-heading reveal">
-      <p class="section-kicker">Scientific foundation</p>
-      <h2>Research behind the platform.</h2>
-      <p>Selected peer-reviewed work from our team provides scientific context for the computational and experimental approaches used across PharmaToxAI.</p>
-    </div>
-    <div class="science-grid{% if public_whitepapers.size == 0 %} science-grid-single{% endif %}">
-      <div class="science-panel reveal">
-        <div class="panel-heading"><h3>Recent publications</h3><a href="{{ '/publications/' | relative_url }}">View all</a></div>
-        {% assign recent_pubs = site.data.publications | sort: 'year' | reverse %}
-        {% for paper in recent_pubs limit:3 %}
-          <a class="science-item" href="{{ paper.doi }}" target="_blank" rel="noopener"><strong>{{ paper.title }}</strong><span>{{ paper.journal }} · {{ paper.year }}</span></a>
-        {% endfor %}
-      </div>
-      {% if public_whitepapers.size > 0 %}
-        <div class="science-panel reveal">
-          <div class="panel-heading"><h3>White papers</h3><a href="{{ '/whitepapers/' | relative_url }}">View all</a></div>
-          {% for paper in public_whitepapers limit:3 %}<a class="science-item" href="{{ paper.url | relative_url }}"><strong>{{ paper.title }}</strong><span>{{ paper.date | date: '%Y' }}</span></a>{% endfor %}
-        </div>
-      {% endif %}
-    </div>
-  </div>
-</section>
-
 <section id="team" class="section section-light">
   <div class="container">
     <div class="section-heading reveal"><p class="section-kicker">Team</p><h2>Interdisciplinary by construction.</h2><p>PharmaToxAI combines computational modeling with experimental physiology, cell biology and human-relevant models at IFIBIO Houssay (UBA–CONICET).</p></div>
