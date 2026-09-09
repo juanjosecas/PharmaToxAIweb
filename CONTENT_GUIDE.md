@@ -26,7 +26,7 @@ p009,"Paper title",Journal Name,2027,https://doi.org/...,casal|digiusto
 
 `members` uses the IDs defined in `_data/team.yml` separated by `|`.
 
-The home page automatically shows only the three newest records as a preview. `/publications/` contains the complete curated list used by the site. Publications are not repeated inside the team cards.
+Publications are shown on the dedicated `/publications/` page. They are intentionally not repeated on the homepage or inside team cards, keeping the main page focused on PharmaToxAI's value proposition, capabilities, workflow, team and contact.
 
 ## Add or edit a team member
 
@@ -82,6 +82,16 @@ published: true
 Write the body in Markdown. If there is a downloadable PDF, place it under `assets/whitepapers/` and reference it in `pdf`.
 
 The internal template is outside the public collection and is excluded from the Jekyll build. White-paper links are hidden from the public navigation until at least one published white paper exists.
+
+## Naming rule
+
+The company name must always be written exactly as:
+
+```text
+PharmaToxAI
+```
+
+Do not use variants such as `Pharmatoxai`, `PharmaToxAi`, `PharmaToxai` or `Pharma Tox AI` in visible site copy. Lowercase `pharmatoxai` is used only where technically required, such as the domain name `pharmatoxai.ar`.
 
 ## Deploy
 
