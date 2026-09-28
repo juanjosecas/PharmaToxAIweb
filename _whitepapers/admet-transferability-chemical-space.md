@@ -219,7 +219,7 @@ That standard is more demanding than a leaderboard. It is also much closer to th
 
 2. Fooladi H, Vu TNL, Mathea M, Kirchmair J. Evaluating Machine Learning Models for Molecular Property Prediction: Performance and Robustness on Out-of-Distribution Data. *Journal of Chemical Information and Modeling*. 2025;65(19):9871–9891. doi: [10.1021/acs.jcim.5c00475](https://doi.org/10.1021/acs.jcim.5c00475).
 
-3. Seal S, Zalte AS, Araripe DA, et al. Model Validation Protocols for Machine Learning in Small Molecule Drug Discovery. *bioRxiv*. Posted August 24, 2026. doi: [10.64898/2026.08.19.745868](https://doi.org/10.64898/2026.08.19.745868). **Preprint; not yet peer reviewed at the time of writing.**
+3. Seal S, Zalte AS, Araripe DA, et al. Model Validation Protocols for Machine Learning in Small Molecule Drug Discovery. *bioRxiv*. Posted August 24, 2026. doi: [10.64898/2026.08.19.745868](https://doi.org/10.64898/2026.08.19.745868).
 
 4. Lim JH, Kim M, Han Y, Lee JY. Improving predictive performance for molecular ADMET properties using a chemical language model. *Bulletin of the Korean Chemical Society*. 2026;47(6):756–768. doi: [10.1002/bkcs.70177](https://doi.org/10.1002/bkcs.70177).
 
@@ -234,7 +234,3 @@ That standard is more demanding than a leaderboard. It is also much closer to th
 9. International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use. *ICH M15: General Principles for Model-Informed Drug Development*. Step 4 adopted January 29, 2026. [ICH M15 via EMA](https://www.ema.europa.eu/en/documents/scientific-guideline/ich-m15-guideline-general-principles-model-informed-drug-development-step-5_en.pdf).
 
 10. Organisation for Economic Co-operation and Development. *Guidance Document on the Validation of (Quantitative) Structure-Activity Relationship [(Q)SAR] Models*. OECD Series on Testing and Assessment No. 69. OECD Publishing. [OECD (Q)SAR project](https://www.oecd.org/en/topics/sub-issues/assessment-of-chemicals/quantitative-structure-activity-relationships-project.html).
-
-### Evidence note
-
-References 1, 2 and 4–7 are primary research articles. Reference 3 is explicitly identified as a preprint because its recent cross-industry validation framework is directly relevant to the methodological question. References 8–10 are regulatory or intergovernmental primary documents/resources. Interpretive recommendations in this white paper are identified as practical implications and should not be read as statements that any particular machine-learning architecture has received regulatory qualification or acceptance.
