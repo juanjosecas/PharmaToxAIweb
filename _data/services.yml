@@ -1,22 +1,14 @@
 - number: "01"
-  title: Predictive toxicology
-  description: AI/ML models for acute, chronic and endpoint-specific toxicity, supported by molecular fingerprints, physicochemical descriptors and curated chemical data.
+  title: In silico prediction
+  description: Computational assessment of toxicity, ADMET and molecular behavior to characterize compounds before experimental testing.
   features:
-    - QSAR/QSPR modeling
-    - Read-across support
-    - Applicability-domain analysis
+    - QSAR/QSPR and predictive toxicology
+    - ADMET, PBPK and barrier prediction
+    - Molecular modeling and applicability-domain analysis
 
 - number: "02"
-  title: ADMET & barrier prediction
-  description: Early characterization of pharmacokinetic behavior, bioavailability and permeability to biologically relevant barriers.
-  features:
-    - PBPK / ADME simulations
-    - Blood-brain barrier
-    - Dermal and placental permeability
-
-- number: "03"
-  title: Human cellular validation
-  description: Experimental evaluation in human cell systems when computational predictions require biological confirmation.
+  title: Human in vitro models
+  description: Experimental evaluation in human cellular systems to test biological responses, refine computational hypotheses and generate decision-relevant evidence.
   features:
     - 2D cellular models
     - 3D cellular models
@@ -26,10 +18,10 @@
   credit_label: CDC / Pexels
   credit_url: https://www.pexels.com/photo/person-doing-an-experiment-3992927/
 
-- number: "04"
-  title: Compound prioritization
-  description: Integrated computational assessment to rank candidates before committing resources to more expensive experimental stages.
+- number: "03"
+  title: Integrated evidence & compound prioritization
+  description: Integration of in silico predictions, read-across evidence and targeted in vitro results to prioritize compounds and support decisions before more resource-intensive development stages.
   features:
-    - Lead prioritization
-    - Molecular modeling
+    - Lead prioritization and read-across
+    - Computational–experimental evidence integration
     - Go / No-Go support
