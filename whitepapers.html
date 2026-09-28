@@ -23,7 +23,11 @@ permalink: /whitepapers/
             {% if paper.summary %}<p>{{ paper.summary }}</p>{% endif %}
             <div class="resource-actions">
               <a href="{{ paper.url | relative_url }}">Read online</a>
-              {% if paper.pdf %}<a href="{{ paper.pdf | relative_url }}">PDF</a>{% endif %}
+              {% if paper.pdf != blank %}
+                <a href="{{ paper.pdf | relative_url }}">PDF</a>
+              {% else %}
+                <a href="{{ paper.url | relative_url }}paper.pdf">PDF</a>
+              {% endif %}
             </div>
           </article>
         {% endfor %}

@@ -37,6 +37,18 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Set up Python for white paper PDFs
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-pdf.txt
+
+      - name: Generate white paper PDFs
+        run: |
+          python -m pip install -r requirements-pdf.txt
+          python scripts/build_whitepaper_pdfs.py
+
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3

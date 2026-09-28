@@ -30,4 +30,6 @@ exclude:
   - MANUAL_INTERNO.md
   - _templates
   - LICENSE
+  - requirements-pdf.txt
+  - scripts
   - vendor
