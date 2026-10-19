@@ -18,3 +18,5 @@ OECD (2026). [TG 445A](https://doi.org/10.1787/765aaada-en).
 ## Context
 
 The assay measures functional enzyme activity, not a clinical outcome.
+
+CYP induction can change parent-compound and metabolite exposure. CYP1A2 is linked to AhR, CYP3A4 to PXR and CAR, and CYP2B6 particularly to CAR. The pathways overlap; a functional response does not demonstrate toxicity by itself.
