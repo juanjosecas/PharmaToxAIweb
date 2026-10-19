@@ -14,3 +14,7 @@ OECD adopted TG 445A on 2 July 2026. It addresses induction of CYP1A2, CYP3A4 an
 ## References
 
 OECD (2026). [TG 445A](https://doi.org/10.1787/765aaada-en).
+
+## Context
+
+The assay measures functional enzyme activity, not a clinical outcome.
