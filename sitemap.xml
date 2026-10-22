@@ -6,6 +6,7 @@ permalink: /sitemap.xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>{{ '/' | absolute_url }}</loc></url>
   <url><loc>{{ '/publications/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/deliverables/' | absolute_url }}</loc></url>
   {% assign public_whitepapers = site.whitepapers | where_exp: 'item', 'item.published != false' %}
   {% if public_whitepapers.size > 0 %}
   <url><loc>{{ '/whitepapers/' | absolute_url }}</loc></url>
