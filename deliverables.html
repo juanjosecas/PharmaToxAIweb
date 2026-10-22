@@ -1,0 +1,130 @@
+---
+layout: default
+title: Integrated evidence report
+seo_title: "Integrated Toxicology Report Demo | PharmaToxAI"
+description: "Interactive demonstration of PharmaToxAI integrated QSAR, ADMET and in vitro evidence reporting, with transparent model and experimental provenance."
+permalink: /deliverables/
+---
+<style>
+.report-page{background:#081521;color:#e4edf3;padding:0 0 90px;font-size:15px}
+.report-page *{box-sizing:border-box}.report-page .r-container{width:min(1180px,calc(100% - 40px));margin:auto}
+.r-hero{padding:68px 0 40px;background:radial-gradient(ellipse at 80% 8%,#124a4a 0,transparent 48%),linear-gradient(130deg,#0d2232,#081521)}
+.r-kicker{color:#59ddc5;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800}
+.r-hero h1{color:#fff;font-family:Manrope,Inter,sans-serif;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.08;max-width:860px;margin:12px 0 18px}
+.r-intro{max-width:790px;color:#b8ccd6;font-size:1.07rem}
+.r-banner{margin:28px 0 0;padding:14px 18px;background:#29301d;border:1px solid #9c823b;color:#f6dea5;border-radius:12px;font-size:13px}
+.r-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:15px;padding:22px 0}
+.r-select{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.r-select label{font-weight:700;color:#cae0e8}
+.r-select select,.r-print{padding:12px 15px;border:1px solid #45616c;background:#112c3a;color:#fff;border-radius:10px;font:inherit;cursor:pointer}
+.r-print{background:#087c69;border-color:#20ac92;font-weight:700}
+.r-section{background:#0f2431;border:1px solid #284250;border-radius:18px;margin:22px 0;padding:clamp(22px,3vw,35px);break-inside:avoid}
+.r-section h2{font-family:Manrope,Inter,sans-serif;color:#fff;font-size:1.5rem;margin:0 0 9px}
+.r-section h3{color:#d8edf2;font-size:1rem;margin:22px 0 10px}
+.r-muted{color:#9bb4bf}.r-eyebrow{font-size:12px;color:#59ddc5;text-transform:uppercase;letter-spacing:.12em;font-weight:800;margin:0 0 8px}
+.r-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:19px 0}
+.r-card{background:#132e3e;border:1px solid #2c4d59;border-radius:11px;padding:15px;min-width:0}
+.r-card .label{display:block;color:#a9c0cd;font-size:12px;margin-bottom:8px}
+.r-card strong{color:#fff;font-size:1.34rem;line-height:1.2;overflow-wrap:anywhere}
+.r-card small{display:block;color:#9bb4bf;margin-top:5px}
+.r-good{color:#57dfaf!important}.r-warn{color:#ffc469!important}.r-bad{color:#ff838a!important}
+.r-status{display:inline-block;border:1px solid currentColor;border-radius:50px;padding:5px 12px;font-size:12px;font-weight:800}
+.r-tablewrap{overflow-x:auto}.r-table{border-collapse:collapse;width:100%;font-size:13px;min-width:620px}
+.r-table th{text-align:left;color:#b5d0dd;background:#193744;font-weight:700}
+.r-table th,.r-table td{padding:12px;border-bottom:1px solid #325060;vertical-align:top}
+.r-table td{color:#e2ebee}.r-code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere;font-size:12px;color:#9edfeb}
+.r-split{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}
+.r-plot{width:100%;height:auto;background:#0d2230;border-radius:12px;border:1px solid #2d4d5c}
+.r-footnotes{font-size:12px;color:#b5c5cd;line-height:1.75}
+.r-footnotes a{color:#71e5d3;text-decoration:underline}
+.r-callout{border-left:3px solid #59ddc5;background:#142f3d;padding:15px 18px;border-radius:0 10px 10px 0;color:#cfe3e8}
+.r-evidence{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.r-evidence span{border:1px solid #3c5661;border-radius:100px;padding:4px 10px;color:#bfd5dc;font-size:12px}
+.r-end{display:flex;justify-content:space-between;gap:18px;border-top:1px solid #36535e;padding-top:18px;color:#9ab4bf;font-size:12px}
+@media(max-width:760px){.r-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.r-split{grid-template-columns:1fr}.r-section{padding:20px}.r-toolbar{align-items:stretch}}
+@media print{@page{size:A4;margin:14mm}body{background:white!important;color:#111!important}.site-header,.site-footer,.r-toolbar,.r-print,.r-banner{display:none!important}.report-page{background:white!important;color:#111!important;padding:0!important;font-size:10pt}.r-hero{background:white!important;padding:0 0 14px}.r-hero h1,.r-section h2,.r-section h3,.r-card strong{color:#111!important}.r-intro,.r-muted,.r-eyebrow,.r-kicker,.r-table td,.r-table th,.r-card .label,.r-card small,.r-footnotes,.r-end,.r-evidence span{color:#222!important}.r-section,.r-card,.r-plot{background:white!important;border:1px solid #aaa!important;box-shadow:none!important}.r-section{break-inside:auto;margin:11px 0;padding:13px}.r-card{break-inside:avoid}.r-table{min-width:0;font-size:9pt}.r-table th{background:#ececec!important}.r-table td,.r-table th{border-color:#bbb!important;padding:7px}.r-code{color:#111!important}.r-callout{background:#eee!important;color:#111!important}.r-good,.r-warn,.r-bad{color:#111!important}.r-footnotes a{color:#111!important}.r-grid{gap:8px}.r-hero .r-banner{display:none!important}a{text-decoration:none!important}svg text{fill:#111!important}}
+</style>
+<div class="report-page" id="report">
+  <header class="r-hero"><div class="r-container">
+    <p class="r-kicker">PharmaToxAI / Evidence architecture</p>
+    <h1>From molecular predictions to experimental evidence.</h1>
+    <p class="r-intro">Explore an example of an integrated, traceable compound assessment spanning structural alerts, statistical QSAR, ADMET, chemical analogues and targeted in vitro endpoints.</p>
+    <p class="r-banner"><strong>DEMONSTRATION · SYNTHETIC DATA.</strong> All compound identifiers, assay results, predicted metrics and analogue entries below are illustrative. No training, chemical calculation, laboratory measurement, independent validation or regulatory submission was performed to produce these examples.</p>
+  </div></header>
+  <div class="r-container">
+    <div class="r-toolbar">
+      <div class="r-select"><label for="report-case">Explore a case</label><select id="report-case"><option value="a">Candidate A · lower-concern scenario</option><option value="b">Impurity B · mutagenicity alert scenario</option></select></div>
+      <button type="button" class="r-print" id="print-report">Print / Export PDF</button>
+    </div>
+    <article aria-label="Example integrated technical report">
+      <section class="r-section" id="audit">
+        <p class="r-eyebrow">00 / Report provenance</p><h2>Assessment record <span class="r-status r-warn">ILLUSTRATIVE · NOT CERTIFIED</span></h2>
+        <div class="r-grid">
+          <div class="r-card"><span class="label">Report ID</span><strong id="report-id"></strong></div>
+          <div class="r-card"><span class="label">Issue date</span><strong>22 Oct 2026</strong></div>
+          <div class="r-card"><span class="label">Compound ID / role</span><strong id="compound-id"></strong><small id="compound-role"></small></div>
+          <div class="r-card"><span class="label">Input identity</span><strong id="compound-name"></strong><small class="r-code" id="compound-smiles"></small></div>
+          <div class="r-card"><span class="label">Computational provenance</span><strong>Example only</strong><small>No executable model, weights, hashes or training set provided.</small></div>
+          <div class="r-card"><span class="label">Experimental provenance</span><strong>Example only</strong><small>No raw data, batch record, SOP or lab signatures.</small></div>
+        </div>
+        <p class="r-muted">Comparison reference: <span id="reference"></span>. Intended context: hypothetical small-molecule drug-development screening. Regulatory classification requires confirmation of chemical identity, impurity context and source evidence.</p>
+      </section>
+      <section class="r-section" id="insilico">
+        <p class="r-eyebrow">01 / In silico hazard assessment</p><h2>ICH M7-oriented mutagenicity assessment</h2>
+        <div class="r-evidence"><span>Structural rules (expert system)</span><span>Independent statistical QSAR</span><span>Applicability domain</span><span>Analogue review</span></div>
+        <div class="r-grid" id="descriptors"></div>
+        <div class="r-split">
+          <div><h3>Complementary evidence streams</h3><div class="r-tablewrap"><table class="r-table"><thead><tr><th>Stream</th><th>Demonstration finding</th><th>Interpretation</th></tr></thead><tbody id="mutagenicity"></tbody></table></div></div>
+          <div><h3>Applicability and classification</h3><div class="r-card"><span class="label">Maximum Morgan/Tanimoto similarity (illustrative)</span><strong id="similarity"></strong><small id="domain-note"></small></div><div class="r-card" style="margin-top:12px"><span class="label">ICH M7 interpretation (provisional demonstration)</span><strong id="ich-class"></strong><small id="ich-note"></small></div></div>
+        </div>
+        <h3>Read-across candidate records</h3>
+        <div class="r-tablewrap"><table class="r-table"><thead><tr><th>Source identifier</th><th>Structural relationship</th><th>Endpoint observation</th><th>Provenance</th></tr></thead><tbody id="analogues"></tbody></table></div>
+        <p class="r-footnotes">Example similarity assumes radius-2 Morgan fingerprints and Tanimoto scoring. Thresholds and confidence require endpoint-specific calibration with a defined training set, nearest-neighbour distributions and external error analysis. Structural similarity alone does not substantiate mechanistic read-across.</p>
+      </section>
+      <section class="r-section" id="admet">
+        <p class="r-eyebrow">02 / Predicted exposure and liability</p><h2>ADMET · quantitative screening</h2>
+        <div class="r-split"><div><div class="r-grid" id="admet-values" style="grid-template-columns:repeat(2,minmax(0,1fr))"></div><p class="r-footnotes">Outputs are hypothetical model results, not empirical measurements. Kinetic and thermodynamic solubility are distinct experimental concepts and cannot be interchanged. Endpoint-specific units, assays, model versions, calibration and uncertainty must accompany real reports.</p></div><div><h3>Risk profile · normalized display</h3><svg id="risk-chart" class="r-plot" viewBox="0 0 440 330" role="img" aria-label="Illustrative normalized risk indicators"></svg><p class="r-footnotes">Normalized scores are demonstration-only visualizations, not calibrated probabilities or regulatory thresholds. Higher indicates greater hypothetical liability.</p></div></div>
+      </section>
+      <section class="r-section" id="invitro">
+        <p class="r-eyebrow">03 / Targeted experimental follow-up</p><h2>Cross-check in human cell and bacterial systems</h2>
+        <p class="r-muted">Proposed validation plan: HepG2 and human dermal fibroblasts; orthogonal metabolic-activity (MTT) and ATP-based (CellTiter-Glo) viability readouts; exposure–response curves; intracellular DCFH-DA oxidation with interference controls; glutathione depletion where mechanistically relevant; exploratory microplate bacterial reverse-mutation screening in TA98/TA100 ±S9.</p>
+        <div class="r-grid" id="cell-values"></div>
+        <h3>Prediction-to-assay evidence alignment</h3><div class="r-tablewrap"><table class="r-table"><thead><tr><th>Endpoint</th><th>In silico</th><th>In vitro (synthetic)</th><th>Concordance / caveat</th></tr></thead><tbody id="comparison"></tbody></table></div>
+        <div class="r-callout" style="margin-top:19px">A two-strain microplate screen is not a full OECD TG 471 bacterial reverse mutation test. A fold-change is not sufficient for a positive Ames classification; controls, dose response, cytotoxicity, reproducibility, appropriate strain coverage and test-design-specific criteria are needed. DCFH-DA is not ROS-species-specific; MTT is a metabolic readout, not a direct cell count.</div>
+      </section>
+      <section class="r-section" id="decision">
+        <p class="r-eyebrow">04 / Evidence integration</p><h2>Technical interpretation and next decision</h2>
+        <div class="r-grid"><div class="r-card"><span class="label">Current illustrative disposition</span><strong id="decision-status"></strong></div><div class="r-card"><span class="label">Residual uncertainty</span><strong id="uncertainty"></strong></div><div class="r-card"><span class="label">Regulatory status</span><strong>Not submitted</strong><small>Independent expert review required.</small></div></div>
+        <p class="r-callout" id="decision-text"></p>
+        <h3>Report authentication</h3><p class="r-muted">Generated report state: demonstration only. Digital signature: not applied. A production dossier must include accountable reviewer identity, signed record, audit trail, validated methods where required, raw data references and verified hashes.</p>
+        <div class="r-end"><span>PharmaToxAI · Integrated evidence demonstration · © 2026</span><span>Controlled-example template · no regulatory endorsement</span></div>
+      </section>
+      <section class="r-section">
+        <p class="r-eyebrow">Methods / references</p><h2>Framework and scope</h2>
+        <div class="r-footnotes">
+          <p>ICH M7(R2), Assessment and Control of DNA Reactive (Mutagenic) Impurities in Pharmaceuticals: <a href="https://database.ich.org/sites/default/files/ICH_M7-R2_Guideline_Step4_2023_0216.pdf" target="_blank" rel="noopener">ICH guideline (PDF)</a>. Two complementary (Q)SAR methodologies and expert review support impurity assessment; classifications depend on context and evidence. Nitrosamines may require compound-specific approaches and additional regulatory guidance.</p>
+          <p>OECD Principles for the Validation of (Q)SAR Models: <a href="https://doi.org/10.1787/9789264085442-en" target="_blank" rel="noopener">OECD guidance</a>. Applicability domain must be defined for the specific model. Bacterial reverse mutation: <a href="https://doi.org/10.1787/9789264071247-en" target="_blank" rel="noopener">OECD Test Guideline 471</a>.</p>
+          <p>Read-across: <a href="https://doi.org/10.2903/j.efsa.2025.9586" target="_blank" rel="noopener">EFSA guidance (2025; food/feed-specific scope)</a>. This reference informs scientific documentation and does not imply automatic acceptance under other jurisdictions.</p>
+          <p>Reporting levels: rule/ML outputs = <em>predictions</em>; microplate and cellular results = <em>experimental observations</em> only when actually measured; final risk decision = <em>expert evidence integration</em>. This page contains synthetic demonstrations at every level.</p>
+        </div>
+      </section>
+    </article>
+  </div>
+</div>
+<script>
+(()=>{
+const cases={
+a:{id:"PTAI-REP-2026-088",compound:"PTAI-DEMO-A",role:"Candidate",name:"Lower-concern analogue (fictional)",smiles:"CCOC(=O)c1ccc(O)cc1",reference:"fictional parent series",descs:[["MW","166.18 g/mol"],["cLogP","2.1"],["TPSA","46.5 Å²"],["HBD","1"],["HBA","3"],["Rotatable bonds","3"]],rule:"No alert detected in example rule set",ml:"Illustrative negative / probability not calibrated",interp:"Concordant negative illustration",sim:"0.83",domain:"Nearest-neighbour value shown for illustration; domain not validated.",ich:"Class 5 · conditional",ichNote:"Only if sufficient negative evidence and applicability are demonstrated; this synthetic screen is not an ICH M7 classification.",analogues:[["SRC-A01","Aromatic ester analogue","Negative reverse mutation (invented)","Synthetic example; no source dataset"],["SRC-A02","Phenolic analogue","Negative reverse mutation (invented)","Synthetic example; no source dataset"]],admet:[["Caco-2","−4.8 log(cm/s)"],["Kinetic logS","−3.0 log mol/L"],["Thermodynamic logS","−3.4 log mol/L"],["CYP3A4 inhibition","Low (demo)"],["CYP2D6 / 2C9","Low / low (demo)"],["Intrinsic clearance","18 µL/min/10⁶ cells"]],risks:[18,26,20,33,15],cell:[["HepG2 IC₅₀","240 µM"],["Fibroblast IC₅₀",">300 µM"],["TA100 +S9","1.05× control"]],comparison:[["Bacterial mutagenicity","Negative illustration","No concentration-related increase (synthetic)","Aligned, not verified"],["Cellular cytotoxicity","Lower concern","IC₅₀ 240 µM (synthetic)","No direct model-to-assay validation"],["Oxidative stress","Low reactivity concern","DCFH-DA 1.1× vehicle (synthetic)","Non-specific readout; interpretation limited"]],status:"Advance to confirmatory testing",uncertainty:"High · illustrative",decision:"Illustrative low-concern outcome. Before any decision, confirm identity and purity, run actual independent complementary (Q)SAR systems within documented applicability domains, verify analogue records and assay conditions, and review the complete evidence package."},
+b:{id:"PTAI-REP-2026-089",compound:"PTAI-DEMO-B",role:"Process impurity",name:"Alkyl sulfonate scenario (illustrative)",smiles:"COS(=O)(=O)C",reference:"hypothetical reference impurity",descs:[["MW","110.13 g/mol"],["cLogP","0.0"],["TPSA","52.6 Å²"],["HBD","0"],["HBA","3"],["Rotatable bonds","1"]],rule:"Illustrative alkylating-agent structural alert",ml:"Illustrative positive / probability not calibrated",interp:"Concordant structural and statistical alerts",sim:"0.61",domain:"Low nearest-neighbour similarity illustration; insufficient evidence to establish AD.",ich:"Class 3 · conditional",ichNote:"Illustrative alerting impurity with no established relevant data. Positive experimental evidence, if established, may change the classification; no class assignment is substantiated here.",analogues:[["SRC-B01","Alkyl sulfonate analogue","Positive reverse mutation (invented)","Synthetic example; no source dataset"],["SRC-B02","Related electrophile","Inconclusive (invented)","Synthetic example; no source dataset"]],admet:[["Caco-2","−5.6 log(cm/s)"],["Kinetic logS","−0.9 log mol/L"],["Thermodynamic logS","−1.2 log mol/L"],["CYP3A4 inhibition","Not assessed"],["CYP2D6 / 2C9","Not assessed"],["Intrinsic clearance","Not assessed"]],risks:[88,72,65,76,81],cell:[["HepG2 IC₅₀","19 µM"],["Fibroblast IC₅₀","27 µM"],["TA100 +S9","3.4× control"]],comparison:[["Bacterial mutagenicity","Alert / positive illustration","TA100 +S9 3.4× vehicle (synthetic)","Suggestive only; full test not performed"],["Cellular cytotoxicity","Higher concern","IC₅₀ 19 µM (synthetic)","No directly matched prediction"],["Oxidative stress","Reactive-metabolite hypothesis","GSH depletion 37% (synthetic)","Hypothesis not proof of metabolite identity"]],status:"Hold / resolve mutagenicity",uncertainty:"High · insufficient evidence",decision:"Illustrative alert scenario: investigate route changes, impurity fate, exposure and validated follow-up. ICH M7 TTC-based limits require a justified compound-specific context and cannot be assumed for every class. Nitrosamines are subject to additional considerations; do not apply the generic TTC automatically."}
+};
+const el=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cards=values=>values.map(([k,v])=>'<div class="r-card"><span class="label">'+esc(k)+'</span><strong>'+esc(v)+'</strong></div>').join("");
+const rows=values=>values.map(row=>'<tr>'+row.map(v=>'<td>'+esc(v)+'</td>').join("")+'</tr>').join("");
+function draw(vals){const svg=el("risk-chart"),labs=["Mutagenicity","Cytotoxicity","Oxidative","ADMET","Uncertainty"];const cx=220,cy=162,R=115;const pos=(i,r)=>{const a=-Math.PI/2+2*Math.PI*i/5;return [cx+r*Math.cos(a),cy+r*Math.sin(a)]};const poly=r=>Array.from({length:5},(_,i)=>pos(i,r).join(",")).join(" ");const points=vals.map((v,i)=>pos(i,R*v/100).join(",")).join(" ");let s='<g stroke="#47616b" fill="none">';for(const r of [R*.25,R*.5,R*.75,R])s+='<polygon points="'+poly(r)+'"/>';for(let i=0;i<5;i++){let [x,y]=pos(i,R);s+='<line x1="'+cx+'" y1="'+cy+'" x2="'+x+'" y2="'+y+'"/>'}s+='</g><polygon points="'+points+'" fill="#28bd9a" fill-opacity=".22" stroke="#56dfb8" stroke-width="3"/>';labs.forEach((l,i)=>{const [x,y]=pos(i,R+31);s+='<text x="'+x+'" y="'+y+'" font-size="11" fill="#c5d8e0" text-anchor="middle">'+l+'</text>'});svg.innerHTML=s;}
+function render(key){const c=cases[key];el("report-id").textContent=c.id;el("compound-id").textContent=c.compound;el("compound-role").textContent=c.role;el("compound-name").textContent=c.name;el("compound-smiles").textContent=c.smiles;el("reference").textContent=c.reference;el("descriptors").innerHTML=cards(c.descs);el("mutagenicity").innerHTML=rows([["Expert rules",c.rule,"Hypothetical alert result"],["Statistical QSAR",c.ml,"No real training/evaluation"],["Evidence agreement",c.interp,"No independent validation"]]);el("similarity").textContent=c.sim;el("domain-note").textContent=c.domain;el("ich-class").textContent=c.ich;el("ich-note").textContent=c.ichNote;el("analogues").innerHTML=rows(c.analogues);el("admet-values").innerHTML=cards(c.admet);el("cell-values").innerHTML=cards(c.cell);el("comparison").innerHTML=rows(c.comparison);el("decision-status").textContent=c.status;el("uncertainty").textContent=c.uncertainty;el("decision-text").textContent=c.decision;draw(c.risks);}
+el("report-case").addEventListener("change",e=>{render(e.target.value);const u=new URL(location.href);u.searchParams.set("case",e.target.value);history.replaceState(null,"",u)});
+el("print-report").addEventListener("click",()=>window.print());
+const initial=new URLSearchParams(location.search).get("case")==="b"?"b":"a";el("report-case").value=initial;render(initial);
+})();
+</script>
